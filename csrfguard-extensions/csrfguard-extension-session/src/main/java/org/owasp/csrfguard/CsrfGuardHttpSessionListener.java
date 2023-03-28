@@ -29,6 +29,7 @@
 
 package org.owasp.csrfguard;
 
+import jakarta.servlet.annotation.WebListener;
 import org.owasp.csrfguard.session.ContainerSession;
 import org.owasp.csrfguard.session.LogicalSession;
 
@@ -36,6 +37,7 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.HttpSessionEvent;
 import jakarta.servlet.http.HttpSessionListener;
 
+@WebListener
 public class CsrfGuardHttpSessionListener implements HttpSessionListener {
 
     @Override

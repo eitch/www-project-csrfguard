@@ -29,6 +29,7 @@
 
 package org.owasp.csrfguard;
 
+import jakarta.servlet.annotation.WebListener;
 import org.apache.commons.lang3.StringUtils;
 import org.owasp.csrfguard.config.overlay.ConfigurationOverlayProvider;
 
@@ -42,6 +43,7 @@ import java.io.InputStream;
 import java.util.Objects;
 import java.util.Properties;
 
+@WebListener
 public class CsrfGuardServletContextListener implements ServletContextListener {
 
 	private static final String CONFIG_PARAM = "Owasp.CsrfGuard.Config";
